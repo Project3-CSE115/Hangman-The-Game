@@ -9,3 +9,5 @@ printf("%c", word[i]);
 else
 
  printf("_ ");
+
+ printf("\n");
