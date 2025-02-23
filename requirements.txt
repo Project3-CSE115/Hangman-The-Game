@@ -1,0 +1,6 @@
+C Library header files needed:
+<stdio.h>
+<stdlib.h>
+<string.h>
+<ctype.h>
+<time.h>
