@@ -7,9 +7,6 @@ Table of Contents
 3. Usage
 4. Code Overview
 5. Challenges and Future Enhancements
-6. Contributing
-7. License
-
    
 Features
 Random Word Selection:
