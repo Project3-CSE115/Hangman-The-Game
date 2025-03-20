@@ -1,0 +1,8 @@
+#define RESET "\033[0m"
+#define BOLD "\033[1m"
+#define GREEN "\033[1;32m"
+#define CYAN "\033[1;36m"
+#define YELLOW "\033[1;33m"
+#define RED "\033[1;31m"
+#define ORANGE "\033[38;2;255;165;0m"
+#define ROYAL_BLUE "\033[1;34m"
