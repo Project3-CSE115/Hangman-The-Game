@@ -5,6 +5,6 @@
 #include <time.h>
 
 #define MAX_TRIES 6
-#define WORD_COUNT 6
+#define WORD_COUNT 100
 
 
