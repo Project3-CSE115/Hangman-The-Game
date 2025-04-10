@@ -1,5 +1,5 @@
 # Hangman Game In C
-A simple, interactive Hangman game implemented in C for the command-line. This project is designed as a learning exercise in C programming, focusing on basic game logic, user input handling, and ASCII art-based visual representation.
+A simple, interactive console-based Hangman game implemented in C for the command-line. This project is designed as a learning exercise in C programming, focusing on basic game logic, user input handling, and ASCII art-based representation, along with some visual and sound elements.
 
 Table of Contents
 1. Features
@@ -9,21 +9,17 @@ Table of Contents
 5. Challenges and Future Enhancements
    
 Features
-Random Word Selection:
-Chooses a random word from a predefined list for each game session.
+Random Word Selection: Chooses a random word from a predefined list for each game session. Word lists are divided for each theme and each level. Words progress in difficulty per level as well as per game each level.
 
-Interactive Gameplay:
-Accepts user guesses, updating the game state based on correct and incorrect inputs.
+Interactive Gameplay: Accepts player guesses, updating the game state based on correct and incorrect inputs. Allows pla
 
-ASCII Art Visuals:
-Displays progressive hangman states as wrong guesses increase.
+ASCII Art Visuals: Displays progressive hangman states as wrong guesses increase.
 
-Win/Loss Detection:
-Tracks correct guesses and ends the game when the word is fully guessed or maximum incorrect attempts are reached.
+Win/Loss Detection: Tracks correct guesses and ends the game when the word is fully guessed or maximum incorrect attempts are reached.
 
 Installation
 1. Clone the Repository
-2. Compile the Code: Use a C compiler (e.g., GCC) to compile the program:
+2. Compile the Code: Use a C compiler (e.g. GCC) to compile the program:
 3. Run the Program
 
 Usage
@@ -45,11 +41,8 @@ Contains the main game loop which processes user input and updates the game stat
 Determines and displays the final outcome (win or loss).
 
 Challenges and Future Enhancements
-
-Challenges: Handling user input reliably in a console environment.
+Challenges: Handling files for player statistics and history for save/load feature.
 Integrating and synchronizing ASCII art visuals with game logic.
 
-Future Enhancements: Expand the word list for more diverse gameplay.
-Implement a scoring system or multiple difficulty levels.
-Enhance input validation to better manage extraneous characters.
-Consider adding a replay feature for continuous play.
+Future Enhancements: 
+Expand the word list for more diverse gameplay.
