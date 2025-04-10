@@ -21,7 +21,7 @@ typedef struct {
 Level levels[MAX_LEVELS];
 int levelCount = 0;
 
-void addLevel(const char *themeList[], const char *wordLists[MAX_THEMES][WORD_COUNT], const char *hintLists[MAX_THEMES][WORD_COUNT]) {
+void addLevel(const char *themeList[MAX_THEMES], const char *wordLists[MAX_THEMES][WORD_COUNT], const char *hintLists[MAX_THEMES][WORD_COUNT]) {
     if (levelCount >= MAX_LEVELS) {
         printf("\nLevel limit reached.\n");
         return;
@@ -36,7 +36,9 @@ void addLevel(const char *themeList[], const char *wordLists[MAX_THEMES][WORD_CO
 
         for (int j = 0; j < WORD_COUNT; j++) {
             levels[levelCount].themes[i].words[j] = strdup(wordLists[i][j]);
-            if (levels[levelCount].themes[i].words[j] == NULL) {
+            levels[levelCount].themes[i].hints[j] = strdup(hintLists[i][j]);
+
+            if (levels[levelCount].themes[i].words[j] == NULL || levels[levelCount].themes[i].hints[j] == NULL) {
                 printf("Memory allocation failed.\n");
                 return;
             }
@@ -45,7 +47,6 @@ void addLevel(const char *themeList[], const char *wordLists[MAX_THEMES][WORD_CO
 
     levelCount++;
 }
-
 
 int main() {
     const char *themeList[MAX_THEMES] = {"FOOD", "ANIMAL", "OBJECT", "SPORT", "CITY"};
