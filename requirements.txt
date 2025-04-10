@@ -1,6 +1,9 @@
-C Library header files needed:
+C Library header files included:
 <stdio.h>
 <stdlib.h>
 <string.h>
 <ctype.h>
 <time.h>
+<windows.h>
+<stdbool.h>
+<conio.h>
