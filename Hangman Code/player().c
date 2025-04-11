@@ -1,7 +1,7 @@
 void player() {
-    int choice;
+    int choice, tempStreak, tempScore, tempLevel, tempGame, tempBroken;
     bool playerFound = false;
-    char playerName[MAX_LENGTH], tempPlayer[MAX_LENGTH], redirect;
+    char playerName[MAX_LENGTH], tempName[MAX_LENGTH], redirect;
 
     system("cls");
     printf(CYAN BOLD "\nWelcome to HANGMAN\n" RESET);
@@ -32,10 +32,35 @@ void player() {
                     scanf("%s", playerName);
                 }
                 
+                FILE *file1 = fopen("stats.txt","r");
+                if (file1 == NULL) {
+                    printf(RED "\nError opening file!\n" RESET);
+                    return;
+                }
+                while (fscanf(file1, "%s %d %d %d %d %d", tempName, &tempStreak, &tempScore, &tempLevel, &tempGame, &tempBroken) != EOF) {
+                    if (strcmp(tempName, playerName) == 0) {
+                        streak = tempStreak;
+                        highestScore = tempScore;
+                        levelCount = tempLevel;
+                        gameCount = tempGame;
+                        streakBroken = tempBroken;
+                        if (streakBroken == 0) {
+                            wins = streak;
+                        }
+                        break;
+                    }
+                }
+                fclose(file1);
+
                 FILE *file = fopen("players.txt","r");
-                while (fscanf(file, "%s", tempPlayer) != EOF) {
-                    if (strcmp(playerName, tempPlayer) == 0) {
+                if (file == NULL) {
+                    printf(RED "\nError opening file!\n" RESET);
+                    return;
+                }
+                while (fscanf(file, "%s", tempName) != EOF) {
+                    if (strcmp(playerName, tempName) == 0) {
                         printf(GREEN "\nLog In Successful!\n" RESET);
+                        strcpy(currentPlayer, playerName);
                         playerFound = true;
                         return;
                     } 
