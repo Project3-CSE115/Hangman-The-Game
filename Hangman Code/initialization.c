@@ -8,7 +8,7 @@ void main() {
 
     printf(CYAN "\n~~~~~~~~~~~~~~~~~~~~\n" RESET);
     printf(CYAN "~~~~~~~~~~~~~~~~~~~~\n" RESET);
-    printf(LAVENDER " WELCOME TO HANGMAN\n" RESET);
+    printf(CREAM " WELCOME TO HANGMAN\n" RESET);
     printf(CYAN "~~~~~~~~~~~~~~~~~~~~\n" RESET);
     printf(CYAN "~~~~~~~~~~~~~~~~~~~~\n" RESET);
     gameMenu();
@@ -21,6 +21,10 @@ void main() {
         gameOver = false;
         hintTaken = false;
         memset(guessed, '\0', sizeof(guessed));
+
+        if (levelCount >= 3) {
+            revealLetter = true;
+        }
 
         printf(ROYAL_BLUE "\n-------LEVEL %d-------\n" RESET, levelCount);
         printf(PINK "-------GAME %d-------\n" RESET, gameCount);
@@ -36,7 +40,7 @@ void main() {
             
             if (response == IDYES) {
                 system("cls");
-                printf(DARK_PINK "\nLeaving the game\n" RESET);
+                printf(DARK_PINK "\nLeaving the game" RESET);
                 for (int i = 0; i < 3; i++) {
                     Sleep(300);
                     printf(DARK_PINK "." RESET);
@@ -97,7 +101,10 @@ void main() {
             displayHangman(tries);
 
             for (int i = 0; i < strlen(word); i++) {
-                if (word[i] == ' ') {
+                if (revealLetter && i == 0) {
+                    guessed[i] = word[i];
+                    printf("%c ", toupper(word[i]));
+                } else if (word[i] == ' ') {
                     printf("  ");
                 } else if (guessed[i] != '\0') {
                     printf("%c ", toupper(guessed[i]));
@@ -115,11 +122,26 @@ void main() {
             }
 
             bool found = false;
-            for (int i = 0; i < strlen(word); i++) {
-                if (toupper(word[i]) == toupper(guessedLetter)) {
-                    guessed[i] = word[i];
-                    found = true;
-                    correctGuessCount++;
+            if (!revealLetter) {
+                for (int i = 0; i < strlen(word); i++) {
+                    if (toupper(word[i]) == toupper(guessedLetter)) {
+                        guessed[i] = word[i];
+                        found = true;
+                        correctGuessCount++;
+                    }
+                }
+            } else {
+                for (int i = 0; i < strlen(word); i++) {
+                    if (toupper(word[i]) == toupper(guessedLetter)) {
+                        guessed[i] = word[i];
+                        found = true;
+                    }
+                }
+                correctGuessCount = 0;
+                for (int i = 0; i < strlen(guessed); i++) {
+                    if (guessed[i] != '\0') {
+                        correctGuessCount++;
+                    }
                 }
             }
 
