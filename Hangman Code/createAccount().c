@@ -25,7 +25,7 @@ void createAccount() {
         printf(RED "\nError opening file!\n" RESET);
         return;
     }
-    fprintf(file1, "%s %d %d %d %d %d\n", playerName, streak, highestScore, 1, gameCount, streakBroken);
+    fprintf(file2, "%s %d %d %d %d %d\n", playerName, streak, highestScore, 1, gameCount, streakBroken);
     fclose(file2);
     printf(GREEN "\nAccount Created Successfully!\n" RESET);
 }
