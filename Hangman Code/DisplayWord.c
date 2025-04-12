@@ -1,29 +1,18 @@
-void displayWord(const char *word, const int*guessed)
-
+void display_Word(char *word, int level)
+{
+    clearScreen();
+    int len = strlen(word);
+    printf("Guess:");
+    for (int i = 0; i < len; i++)
     {
-
-        for(int i = 0; i < strlen(word); i++)
-
-    {
-
-        if (guessed[i])
-
+        if (level >= 2 && i == 0)
         {
-
-            printf("%c", word[i]);
-
+            printf("%c ", word[i]);
         }
-
         else
-
         {
-
             printf("_ ");
-
         }
-
     }
-
     printf("\n");
-
 }
