@@ -1,11 +1,26 @@
-void player() {
-    int choice, tempStreak, tempScore, tempLevel, tempGame, tempBroken;
+typedef struct {
+    char name[MAX_LENGTH];
+    int age;
+    int streak;
+    int highScore;
+    int level;
+    int game;
+    int streakBroken;
+    int hintBadge;
+    int speedBadge;
+    int streakBadge;
+} Player;
+
+Player player;
+
+void playerMenu() {
+    int choice, tempStreak, tempScore, tempLevel, tempGame, tempBroken, tempB1, tempB2, tempB3, age;
     bool playerFound = false;
     char playerName[MAX_LENGTH], tempName[MAX_LENGTH], redirect;
 
     system("cls");
     printf(CYAN BOLD "\nWelcome to HANGMAN\n" RESET);
-    printf(CREAM "\n1. Create account\n" RESET);
+    printf(CREAM "\n1. Create Account\n" RESET);
     printf(CREAM "2. Log In\n" RESET);
     printf(CREAM "3. Play As Guest\n" RESET);
     printf(PURPLE "\nEnter a choice: " RESET);
@@ -26,8 +41,6 @@ void player() {
                 scanf("%s", playerName);
                 while (!nameValid(playerName)) {
                     printf(RED "\nThe player name should be less than 20 characters.\n" RESET);
-                    Sleep(1000);
-                    system("cls");
                     printf(PURPLE "\nEnter player name: " RESET);
                     scanf("%s", playerName);
                 }
@@ -37,16 +50,20 @@ void player() {
                     printf(RED "\nError opening file!\n" RESET);
                     return;
                 }
-                while (fscanf(file1, "%s %d %d %d %d %d", tempName, &tempStreak, &tempScore, &tempLevel, &tempGame, &tempBroken) != EOF) {
+                while (fscanf(file1, "%s %d %d %d %d %d %d %d %d", tempName, &tempStreak, &tempScore, &tempLevel, &tempGame, &tempBroken, &tempB1, &tempB2, &tempB3) != EOF) {
                     if (strcmp(tempName, playerName) == 0) {
-                        streak = tempStreak;
-                        highestScore = tempScore;
-                        levelCount = tempLevel;
-                        gameCount = tempGame;
-                        streakBroken = tempBroken;
-                        if (streakBroken == 0) {
-                            wins = streak;
+                        strcpy(player.name, playerName);
+                        player.streak = tempStreak;
+                        player.highScore = tempScore;
+                        player.level = tempLevel;
+                        player.game = tempGame;
+                        player.streakBroken = tempBroken;
+                        if (player.streakBroken == 0) {
+                            wins = player.streak;
                         }
+                        player.hintBadge = tempB1;
+                        player.speedBadge = tempB2;
+                        player.streakBadge = tempB3;
                         break;
                     }
                 }
@@ -57,10 +74,10 @@ void player() {
                     printf(RED "\nError opening file!\n" RESET);
                     return;
                 }
-                while (fscanf(file, "%s", tempName) != EOF) {
+                while (fscanf(file, "%s %d", tempName, &age) != EOF) {
                     if (strcmp(playerName, tempName) == 0) {
                         printf(GREEN "\nLog In Successful!\n" RESET);
-                        strcpy(currentPlayer, playerName);
+                        player.age = age;
                         playerFound = true;
                         return;
                     } 
