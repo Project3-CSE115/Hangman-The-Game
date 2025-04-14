@@ -108,10 +108,22 @@ void printHangman(int blink) {
     printf(BLINK RED"     |\n" RESET);
     printf(BLINK RED"  ___|___\n" RESET);
 
-    if (blink)
-        printf("     X_X   GAME OVER\n");
-    else
-        printf("     -_-   GAME OVER\n");
+     printf("         _.,,,.._\n");
+    printf("      ,d$$$$$$$SSIi:.\n");
+    printf("    ,S$$$$$$$$$$$$SIIi:.\n");
+    printf("   jI$$$$$$$$$$$$$SISSi:.\n");
+    printf("  ,S$$$$$$$$$$$$$$$$$$Ii:.\n");
+    printf(" j*?$$$$$$$$$$$$$$$$$$Ii\n");
+    printf(" :  ?$$$$$$$$$$$S7IISS$$I:\n");
+    printf("j_ /$$7'*4$$$$7:iIS$$$$$I'\n");
+    printf("*?''?$$:  '$k :iIIS$$$$7'\n");
+    printf("||   ?$L,  ,d$    $$$$7'\n");
+    printf(",d._J$$$$S$$$L,_*'$$$\n");
+    printf("?$$$$$$k:?$$**,  *''\n");
+    printf("\\:`****^`:jIS7\n");
+    printf("j$k,i;/_,oSSI'\n");
+    printf("?SSS$$$$$?*`\n");
+    printf(" `****''`\n");
 }
 
 void loseAnimation(const char *word, int score) {
