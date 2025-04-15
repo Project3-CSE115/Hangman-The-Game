@@ -86,12 +86,12 @@ Earn badges for completing specific challenges:
 
 ## How to Run
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/your-username/hangman-game.git
    cd hangman-game
-### 2. Compile the program: gcc Hangman.c -o Hangman.exe -lwinmm
-### 3. Run the program: ./Hangman.exe
+2. **Compile the program:** gcc Hangman.c -o Hangman.exe -lwinmm
+3. **Run the program:** ./Hangman.exe
 
 ---
 
