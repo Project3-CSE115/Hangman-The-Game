@@ -8,8 +8,8 @@ Welcome to the **Hangman Game**, a feature-rich word-guessing game implemented i
 
 ### 1. **Game Modes**
 - **Normal Mode**: Play through levels with increasing difficulty.
-- **Time Challenge Mode**: Guess the word within 2 minutes per game.
-- **Time Attack Mode**: Guess as many words as possible within 5 minutes.
+- **Time Challenge Mode**: Guess the word within 1 minute per game.
+- **Time Attack Mode**: Guess as many words as possible within 3 minutes.
 - **Multiplayer Mode**: Two players take turns setting and guessing words.
 
 ### 2. **Player Profiles**
@@ -25,9 +25,9 @@ Earn badges for completing specific challenges:
 - **Mind Master**: Complete Level 4.
 - **Hangman Hero**: Complete Level 5.
 - **Hintless Hero**: Complete a level without using hints.
-- **Speed Guesser**: Complete a game in Time Challenge Mode with more than 60 seconds remaining.
+- **Speed Guesser**: Complete a game in Time Challenge Mode with more than 30 seconds remaining.
 - **Streak Master**: Achieve a streak of 5 or more wins.
-- **Time Warrior**: Score 100+ points or guess 10+ words in Time Attack Mode.
+- **Time Warrior**: Score 100+ points or guess 7+ words in Time Attack Mode.
 - **Ultimate Champion**: Master all levels.
 
 ### 4. **Leaderboard**
@@ -56,7 +56,7 @@ Earn badges for completing specific challenges:
 ### 3. **Game Modes**
 - **Normal Mode**: Progress through levels and themes.
 - **Time Challenge Mode**: Guess the word within 2 minutes.
-- **Time Attack Mode**: Choose a theme and guess as many words as possible in 5 minutes.
+- **Time Attack Mode**: Choose a theme and guess as many words as possible in 3 minutes.
 - **Multiplayer Mode**: Take turns setting and guessing words with another player.
 
 ---
