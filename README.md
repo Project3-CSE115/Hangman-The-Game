@@ -6,18 +6,18 @@ Welcome to the **Hangman Game**, a feature-rich word-guessing game implemented i
 
 ## Features
 
-1. **Game Modes**
+### 1. **Game Modes**
 - **Normal Mode**: Play through levels with increasing difficulty.
 - **Time Challenge Mode**: Guess the word within 2 minutes per game.
 - **Time Attack Mode**: Guess as many words as possible within 5 minutes.
 - **Multiplayer Mode**: Two players take turns setting and guessing words.
 
-2. **Player Profiles**
+### 2. **Player Profiles**
 - Create and log in to player accounts.
 - Track progress, including streaks, high scores, and badges.
 - Update player names and view detailed profiles.
 
-3. **Badges**
+### 3. **Badges**
 Earn badges for completing specific challenges:
 - **Rookie Rambler**: Complete Level 1.
 - **Casual Challenger**: Complete Level 2.
@@ -30,13 +30,13 @@ Earn badges for completing specific challenges:
 - **Time Warrior**: Score 100+ points or guess 10+ words in Time Attack Mode.
 - **Ultimate Champion**: Master all levels.
 
-4. **Leaderboard**
+### 4. **Leaderboard**
 - View the top 10 players based on high scores.
 
-5. **Hints**
+### 5. **Hints**
 - Use hints to help guess the word (limited to 3 hints per session).
 
-6. **Animations and Sound Effects**
+### 6. **Animations and Sound Effects**
 - Victory and loss animations.
 - Sound effects for wins, losses, and other events.
 
@@ -44,16 +44,16 @@ Earn badges for completing specific challenges:
 
 ## How to Play
 
-1. **Main Menu**
+### 1. **Main Menu**
 - Choose to create an account, log in, or play as a guest.
 - Access game modes, instructions, leaderboard, and credits.
 
-2. **Gameplay**
+### 2. **Gameplay**
 - Guess letters to complete the word before running out of tries.
 - Each correct guess earns points, while incorrect guesses reduce your score.
 - Use hints strategically to avoid losing points.
 
-3. **Game Modes**
+### 3. **Game Modes**
 - **Normal Mode**: Progress through levels and themes.
 - **Time Challenge Mode**: Guess the word within 2 minutes.
 - **Time Attack Mode**: Choose a theme and guess as many words as possible in 5 minutes.
@@ -86,12 +86,10 @@ Earn badges for completing specific challenges:
 
 ## How to Run
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/hangman-game.git
-   cd hangman-game
-2. Compile the program: gcc Hangman.c -o Hangman.exe -lwinmm
-3. Run the program: ./Hangman.exe
+### 1. Clone the repository:
+   ```bash git clone https://github.com/your-username/hangman-game.git cd hangman-game
+### 2. Compile the program: gcc Hangman.c -o Hangman.exe -lwinmm
+### 3. Run the program: ./Hangman.exe
 
 ---
 
