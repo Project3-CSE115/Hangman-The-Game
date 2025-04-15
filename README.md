@@ -1,48 +1,120 @@
-# Hangman Game In C
-A simple, interactive console-based Hangman game implemented in C for the command-line. This project is designed as a learning exercise in C programming, focusing on basic game logic, user input handling, and ASCII art-based representation, along with some visual and sound elements.
+# Hangman Game
 
-Table of Contents
-1. Features
-2. Installation
-3. Usage
-4. Code Overview
-5. Challenges and Future Enhancements
-   
-Features
-Random Word Selection: Chooses a random word from a predefined list for each game session. Word lists are divided for each theme and each level. Words progress in difficulty per level as well as per game each level.
+Welcome to the **Hangman Game**, a feature-rich word-guessing game implemented in C. This program offers multiple game modes, player profiles, badges, and a leaderboard system to provide an engaging and interactive experience.
 
-Interactive Gameplay: Accepts player guesses, updating the game state based on correct and incorrect inputs. Allows pla
+---
 
-ASCII Art Visuals: Displays progressive hangman states as wrong guesses increase.
+## Features
 
-Win/Loss Detection: Tracks correct guesses and ends the game when the word is fully guessed or maximum incorrect attempts are reached.
+1. **Game Modes**
+- **Normal Mode**: Play through levels with increasing difficulty.
+- **Time Challenge Mode**: Guess the word within 2 minutes per game.
+- **Time Attack Mode**: Guess as many words as possible within 5 minutes.
+- **Multiplayer Mode**: Two players take turns setting and guessing words.
 
-Installation
-1. Clone the Repository
-2. Compile the Code: Use a C compiler (e.g. GCC) to compile the program:
-3. Run the Program
+2. **Player Profiles**
+- Create and log in to player accounts.
+- Track progress, including streaks, high scores, and badges.
+- Update player names and view detailed profiles.
 
-Usage
-When you run the program, you'll see the title and a welcome message along with game instructions. The program randomly selects a word, and you will be prompted to enter letter guesses. The current state of the word and the hangman (via ASCII art) are displayed after each guess. The game ends when either:
+3. **Badges**
+Earn badges for completing specific challenges:
+- **Rookie Rambler**: Complete Level 1.
+- **Casual Challenger**: Complete Level 2.
+- **Puzzle Pro**: Complete Level 3.
+- **Mind Master**: Complete Level 4.
+- **Hangman Hero**: Complete Level 5.
+- **Hintless Hero**: Complete a level without using hints.
+- **Speed Guesser**: Complete a game in Time Challenge Mode with more than 60 seconds remaining.
+- **Streak Master**: Achieve a streak of 5 or more wins.
+- **Time Warrior**: Score 100+ points or guess 10+ words in Time Attack Mode.
+- **Ultimate Champion**: Master all levels.
 
-The entire word is correctly guessed (win), or
-The maximum number of incorrect guesses (6) is reached (loss).
+4. **Leaderboard**
+- View the top 10 players based on high scores.
 
-Code Overview
+5. **Hints**
+- Use hints to help guess the word (limited to 3 hints per session).
 
-displayHangman(int attempts): Displays the ASCII art corresponding to the number of incorrect attempts.
+6. **Animations and Sound Effects**
+- Victory and loss animations.
+- Sound effects for wins, losses, and other events.
 
-displaytitle(): Prints the game title and decorative header.
+---
 
-displayWord(const char *word, const int *guessed): Prints the current progress of the word with correctly guessed letters and underscores for missing ones.
+## How to Play
 
-main(): Sets up the game environment (random word selection, initialization of game state).
-Contains the main game loop which processes user input and updates the game state.
-Determines and displays the final outcome (win or loss).
+1. **Main Menu**
+- Choose to create an account, log in, or play as a guest.
+- Access game modes, instructions, leaderboard, and credits.
 
-Challenges and Future Enhancements
-Challenges: Handling files for player statistics and history for save/load feature.
-Integrating and synchronizing ASCII art visuals with game logic.
+2. **Gameplay**
+- Guess letters to complete the word before running out of tries.
+- Each correct guess earns points, while incorrect guesses reduce your score.
+- Use hints strategically to avoid losing points.
 
-Future Enhancements: 
-Expand the word list for more diverse gameplay.
+3. **Game Modes**
+- **Normal Mode**: Progress through levels and themes.
+- **Time Challenge Mode**: Guess the word within 2 minutes.
+- **Time Attack Mode**: Choose a theme and guess as many words as possible in 5 minutes.
+- **Multiplayer Mode**: Take turns setting and guessing words with another player.
+
+---
+
+## Scoring System
+
+- **+5 points** for each correct guess.
+- **-1 point** for each incorrect guess.
+- **-3 points** for using a hint.
+
+---
+
+## File Structure
+
+- **players.txt**: Stores player names and ages.
+- **stats.txt**: Stores player statistics, including streaks, high scores, and badges.
+- **temp.txt**: Temporary file used for updating player data.
+
+---
+
+## Requirements
+
+- **Operating System**: Windows
+- **Compiler**: GCC or any C compiler supporting `windows.h` and `mmsystem.h`.
+
+---
+
+## How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/hangman-game.git
+   cd hangman-game
+2. Compile the program: gcc Hangman.c -o Hangman.exe -lwinmm
+3. Run the program: ./Hangman.exe
+
+---
+
+## Challenges Faced
+
+- **File Handling**: Managing player data across sessions required robust file handling to ensure data integrity.
+- **Real-Time Timer**: Implementing countdown timers for Time Challenge and Time Attack modes while maintaining smooth gameplay.
+- **Dynamic Memory Management**: Allocating and freeing memory for themes, words, and hints without leaks.
+- **Cross-Platform Compatibility**: The use of Windows-specific libraries limits portability.
+
+---
+
+## Future Improvements
+
+- **Cross-Platform Support**: Adapt the program for Linux and macOS.
+- **Enhanced UI**: Add a graphical user interface (GUI) for better user experience.
+- **Additional Game Modes**: Introduce new modes, such as cooperative or competitive multiplayer.
+- **Custom Themes**: Allow players to create and share custom themes.
+
+---
+
+## Credits
+- Priyonti Tabassum Haque
+- Sumaiya Yasmin Nairit
+- Dizzya Al Fahad
+- Avishek Saha
